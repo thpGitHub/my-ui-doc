@@ -1,0 +1,42 @@
+[
+  {
+    "label": "Guides",
+    "items": [
+      {
+        "label": "Example Guide",
+        "link": "/guides/example/"
+      }
+    ]
+  },
+  {
+    "label": "Reference",
+    "autogenerate": {
+      "directory": "reference"
+    }
+  },
+  {
+    "label": "Components",
+    "items": [
+      {
+        "label": "test component in db",
+        "link": "/components/665ca88c2336a2696d71d631"
+      },
+      {
+        "label": "MyComponent",
+        "link": "/components/6662d6cc621a2997c484ddd9"
+      },
+      {
+        "label": "Button",
+        "link": "/components/6662d6cc621a2997c484ddd8"
+      },
+      {
+        "label": "Button",
+        "link": "/components/6662d9d2621a2997c484dddb"
+      },
+      {
+        "label": "MyComponent",
+        "link": "/components/6662d9d2621a2997c484dddc"
+      }
+    ]
+  }
+]
