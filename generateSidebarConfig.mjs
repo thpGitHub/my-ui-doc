@@ -19,10 +19,7 @@ async function generateSidebarConfig() {
       },
       {
         label: 'Components',
-        items: components.map(component => ({
-          label: component.name,
-          link: `/components/${component._id}`,
-        })),
+        autogenerate: { directory: 'components' },
       },
     ];
 
