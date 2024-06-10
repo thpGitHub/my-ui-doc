@@ -6,7 +6,7 @@ import astroExpressiveCode from 'astro-expressive-code';
 import fs from 'fs';
 import dotenv from 'dotenv';
 
-dotenv.config(); // Charger les variables d'environnement
+dotenv.config();
 
 // Chargez la configuration de la sidebar générée
 const sidebarConfig = JSON.parse(fs.readFileSync('./sidebar.config.json', 'utf-8'));
@@ -18,9 +18,9 @@ export default defineConfig({
     astroExpressiveCode(),
     mdx(),
     starlight({
-      title: 'My Docs',
+      title: 'My UI Doc',
       social: {
-        github: 'https://github.com/withastro/starlight',
+        github: 'https://github.com/thpGitHub',
       },
       sidebar: sidebarConfig,
     }),

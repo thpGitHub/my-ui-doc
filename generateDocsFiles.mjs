@@ -25,8 +25,6 @@ title: "${component.name}"
 import ${component.name} from '../../../components/${component.name}.jsx';
 import { Code } from '@astrojs/starlight/components';
 
-# Aperçu
-
 <${component.name} />
 
 ## Import

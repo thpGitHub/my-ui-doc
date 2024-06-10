@@ -10,7 +10,7 @@ async function generateSidebarConfig() {
       {
         label: 'Guides',
         items: [
-          { label: 'Example Guide', link: '/guides/example/' },
+          { label: 'Installation', link: '/guides/installation/' },
         ],
       },
       {
