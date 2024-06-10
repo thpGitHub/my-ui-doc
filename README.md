@@ -1,6 +1,6 @@
 # Projet de Documentation
 
-Ce projet génère de la documentation pour les composants React en utilisant Astro et Starlight. La documentation inclut des pages générées automatiquement pour chaque composant, affichant à la fois le composant rendu et son code source.
+Ce projet génère de la documentation pour les composants React en utilisant Astro et Starlight. La documentation inclut des pages générées automatiquement pour chaque composant, affichant à la fois le rendu du composant et son code source.
 
 ## Configuration
 
