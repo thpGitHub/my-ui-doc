@@ -2,6 +2,12 @@
 
 [![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-brightgreen)](https://my-ui-doc.vercel.app/)
 
+- thierry poupon
+
+- [Component library on npm ](https://www.npmjs.com/package/my-react-ui-components)
+
+- [Repo documentation backoffice ](https://github.com/thpGitHub/my-ui)
+
 Ce projet génère de la documentation pour les composants React en utilisant Astro et Starlight. La documentation inclut des pages générées automatiquement pour chaque composant, affichant à la fois le rendu du composant et son code source.
 
 ## Configuration
