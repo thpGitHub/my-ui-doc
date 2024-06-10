@@ -1,54 +1,78 @@
-# Starlight Starter Kit: Basics
+# Projet de Documentation
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Ce projet génère de la documentation pour les composants React en utilisant Astro et Starlight. La documentation inclut des pages générées automatiquement pour chaque composant, affichant à la fois le composant rendu et son code source.
+
+## Configuration
+
+### Prérequis
+
+- Node.js
+- MongoDB
+
+### Installation
+
+1. Clonez le dépôt :
+
+   ```bash
+   git clone https://github.com/thpGitHub/my-ui-doc.git
+   cd my-ui-doc 
+   ```
+
+2. Installez les dépendances :
+
+   ```bash
+   npm install
+   ```
+
+3. Configurez les variables d'environnement :
+
+    Créez un fichier .env à la racine de votre projet et ajoutez votre chaîne de connexion MongoDB :
+
+   ```bash
+   MONGODB_URI=your_mongodb_connection_string
+   ```
+
+## Génération des Composants et de la Documentation
+
+  Ce projet inclut des scripts pour générer les fichiers de composants React et les fichiers de documentation correspondants à partir d'une base de données MongoDB.
+
+1. Générer les Fichiers de Composants React
+
+    Le script `generateComponentsFiles.mjs` récupère les composants depuis la base     de données MongoDB et génère des fichiers de composants React dans le répertoire       `src/components/`.
+
+2. Générer les Fichiers de Documentation
+
+    Le script `generateDocsFiles.mjs` récupère les composants depuis la base de     données MongoDB et génère des fichiers de documentation Markdown (MDX) dans le  répertoire `src/content/docs/components/`. Chaque fichier de documentation   inclut le composant rendu et son code source.
+
+3. Générer la Configuration de la Barre Latérale
+
+    Le script `generateSidebarConfig.mjs` génère le fichier de configuration de la  barre latérale `sidebar.config.json` utilisé par Astro Starlight.
+
+## Lancer le Serveur de Développement
+
+Pour démarrer le serveur de développement et générer les composants, les fichiers de documentation et la configuration de la barre latérale, exécutez :
 
 ```bash
-npm create astro@latest -- --template starlight
+npm run dev
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+Cette commande va :
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Générer les fichiers de composants React depuis la base de données.
+- Générer les fichiers de documentation pour chaque composant.
+- Générer le fichier de configuration de la barre latérale.
+- Démarrer le serveur de développement Astro.
 
-## 🚀 Project Structure
+## Construire le Projet
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+Pour construire le projet pour la production, exécutez :
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   │   └── config.ts
-│   └── env.d.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+```bash
+npm run build
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+Cette commande effectuera les mêmes étapes que la commande de développement, mais elle construira également le projet pour le déploiement.
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+## Conclusion
 
-Static assets, like favicons, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+Cette configuration vous permet de générer dynamiquement de la documentation pour vos composants React à partir d'une base de données MongoDB.
