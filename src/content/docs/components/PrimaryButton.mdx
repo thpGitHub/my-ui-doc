@@ -1,0 +1,45 @@
+---
+title: "PrimaryButton"
+---
+
+import PrimaryButton from '../../../components/PrimaryButton.jsx';
+import { Code } from '@astrojs/starlight/components';
+
+<PrimaryButton />
+
+## Import
+
+<Code code={`import { PrimaryButton } from 'my-react-ui-components';`} lang="bash" />
+
+## Code
+
+<Code code={`import React, { useState } from 'react';
+
+const PrimaryButton = ({ children = 'PrimaryButton' }) => {
+  const [hover, setHover] = useState(false);
+
+  const buttonStyle = {
+    padding: '10px 20px',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    fontSize: '16px',
+    margin: '5px',
+    backgroundColor: hover ? 'white' : 'blue',
+    color: hover ? 'blue' : 'white',
+    transition: 'background-color 0.3s ease, color 0.3s ease',
+  };
+
+  return (
+    <button
+      style={buttonStyle}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      {children}
+    </button>
+  );
+};
+
+export default PrimaryButton;
+`} lang="js" title="PrimaryButton.jsx" />
